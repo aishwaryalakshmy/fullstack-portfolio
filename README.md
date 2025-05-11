@@ -1,87 +1,120 @@
-# Personal-Portfolio
+# Full-Stack Developer Portfolio
 
-![](https://img.shields.io/github/issues-pr/Rishit30G/Personal-Portfolio?style=for-the-badge)   ![](https://img.shields.io/github/last-commit/Rishit30G/Personal-Portfolio?style=for-the-badge) 
+![Portfolio Screenshot](![image](https://github.com/user-attachments/assets/7829c9cc-db75-455d-ab9d-2a7239daf3dc)
+) <!-- Replace with your actual screenshot path -->
 
-![](https://img.shields.io/github/forks/Rishit30G/Personal-Portfolio?style=for-the-badge)     ![](https://img.shields.io/github/followers/Rishit30G?style=for-the-badge)  ![](https://img.shields.io/github/stars/Rishit30G/Personal-Portfolio?style=for-the-badge)
+A responsive personal portfolio website with a fully functional contact form and MySQL backend.
 
-### Website Layout
+## 🧰 Tech Stack
 
+- **Frontend**: HTML5, CSS3, JavaScript, jQuery  
+- **Backend**: PHP, MySQL  
+- **Libraries**: SweetAlert2, Typed.js, AOS (Animate On Scroll)
 
-https://user-images.githubusercontent.com/74411873/145658790-95f3c433-8a92-4339-b96c-77777e7d5842.mp4
+---
 
+## ✨ Features
 
+- 🚀 Modern, animated UI design  
+- 📱 Fully responsive on all screen sizes  
+- 📬 Contact form with database integration  
+- 🗂️ Projects section with descriptions  
+- 🧠 Skill icons with interactivity  
+- 🧭 Smooth scrolling and progress bar
 
-### How to go about
-This is the basic layout of the website where things need to be replaced with your data and credentials, follow these easy steps given down below to get your website working: 
+---
 
-## HTML ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)  
+## 🛠️ Installation
 
-- Change the Title of the Web Page to your name
-- Go to https://favicon.io to generate favicon for your website
-- Go to https://fontawesome.com/ and get your Kit number and replace it in place of `{{YOUR KIT KEY}}`
-- Go to https://www.emailjs.com/ and sign up yourself, create Email Service and Email Template. 
-- Go to https://dashboard.emailjs.com/admin/integration/browser and get your UserID and replace it with `{{YOUR USER KEY}}`
+### ✅ Prerequisites
 
-#### HOME
+- XAMPP / WAMP / MAMP (for local development)  
+- PHP 7.0+  
+- MySQL 5.7+  
+- Modern web browser
 
-- Next, Moving to Home section, here replace `{{YOUR NAME}}` with your full name 
+### 📥 Setup Steps
 
-#### ABOUT 
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/yourusername/your-portfolio.git
+   cd your-portfolio
+````
 
-- Replace `P3021961.jpg` with your own professional image 
-- In Text class, replace `{{YOUR NAME}}` with your full name 
-- In the Paragraph class, replace 'lorem ipsum' with some proper description about yourself in about 4-5 lines
-- Make a google drive folder for putting in the resume and replace `{{GOOGLE DRIVE LINK FOR RESUME}}` with drive link 
+2. **Import the Database**
 
-#### SERVICES
+   * Open phpMyAdmin
+   * Run this SQL:
 
-- Replace` {{SKILL 1}},{{SKILL 2}},{{SKILL 3}}` with your skills 
-- Replace the 'lorem ipsum' in all three sections with relevent description of your services
+     ```sql
+     CREATE DATABASE portfolio_contact;
+     USE portfolio_contact;
+     CREATE TABLE messages (
+       id INT AUTO_INCREMENT PRIMARY KEY,
+       name VARCHAR(100) NOT NULL,
+       email VARCHAR(100) NOT NULL,
+       subject VARCHAR(255) NOT NULL,
+       message TEXT NOT NULL,
+       created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+     );
+     ```
 
-#### SKILLS
+3. **Configure `contact.php`**
+   Replace the credentials:
 
-- Replace 'Lorem Ipsum' with relevent description of your skills .
-- In the anchor tag, feel free to redirect the READ MORE button to a suitable website.
-- Replace the `<svg></svg>` tags with the icons related to your skill set (For icons, checkout - https://icons8.com/)
+   ```php
+   $servername = "localhost";
+   $username = "your_db_username";
+   $password = "your_db_password";
+   $dbname = "portfolio_contact";
+   ```
 
-#### CONTACT
+---
 
-- Replace 'Lorem Ipsum' with text of your choice so that users can contact you. 
-- Replace {`{YOUR NAME}},{{YOUR ADDRESS}},{{YOUR EMAIL}}`with your full name, proximate address and email address.
+## 📁 Project Structure
 
-#### FOOTER
+```
+portfolio/
+├── assets/
+│   ├── css/
+│   │   └── style.css
+│   ├── js/
+│   │   └── script.js
+│   └── images/
+├── contact.php
+├── index.html
+├── README.md
+└── portfolio_contact.sql
+```
 
-- Replace `{{YOUR NAME}}` with your full name
-- Replace `{{YOUR LINKEDIN}},{{YOUR GITHUB}},{{YOUR YOUTUBE}}` with links of your linkedin, github and youtube respectively. 
+---
 
+## 📬 Contact Form (Functionality)
 
+* Sends form input to the MySQL database via AJAX and PHP.
+* Uses SweetAlert2 to display success or error messages.
 
+---
 
+## 🌐 Deployment
 
-## JavaScript ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+* Upload files to your hosting server
+* Import SQL file into phpMyAdmin
+* Ensure `contact.php` is publicly accessible
+* Verify PHP and MySQL credentials are correct
 
-- Replace `{{SERVICE ID}},{{TEMPLATE ID}}` with the unique IDs that you will get once you Sign Up
+---
 
-    **Service ID** - https://dashboard.emailjs.com/admin, 
-    **Template ID** - https://dashboard.emailjs.com/admin/templates
-    
- - For reference take a look at this video for setting up EmailJS - https://www.youtube.com/watch?v=x7Ewtay0Q78&ab_channel=CodewithVoran
+## 📜 License
 
-- Replace `"Your Skill","Your Hobby","Your Passion","Your Proficiency"` with your respective things. 
+This project is open-source and available under the [MIT License](LICENSE).
 
-## Thank You
+---
 
-**Hurray! Your personal-portfolio website is up and running, now deploy it on Github Pages and you are good to go, 
- If you found this helpful, dont forget to 🌟 this repository and share it with others!!**
- 
-### Contributors
-<a href="https://github.com/Rishit30G/Personal-Portfolio/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Rishit30G/Personal-Portfolio" />
-</a>
+💖 If you found this helpful, give a ⭐ on GitHub and feel free to fork the project!
 
-#### Website Link: https://rishit30g.github.io/Personal-Portfolio/
-<br>
+```
 
-## Got the swags as a Maintainer 🥳 (22nd March'22) 
-Thanks to all those who considered contributing to my repository and made this possible! (My First Hacktober 🥇)
-![Hacktoberfest_21](https://user-images.githubusercontent.com/74411873/159472519-09989d72-278f-493b-9a01-4e484440e79e.jpg)
+Let me know if you'd like the actual SQL file (`portfolio_contact.sql`) or help creating a `LICENSE` file too!
+```
+
