@@ -1,7 +1,7 @@
 # Full-Stack Developer Portfolio
 
-![Portfolio Screenshot](![image](https://github.com/user-attachments/assets/7829c9cc-db75-455d-ab9d-2a7239daf3dc)
-) <!-- Replace with your actual screenshot path -->
+![image](https://github.com/user-attachments/assets/c630e3fa-683d-4151-a7f2-4b4dc6e3479a)
+<!-- Replace with your actual screenshot path -->
 
 A responsive personal portfolio website with a fully functional contact form and MySQL backend.
 
